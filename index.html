@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>H-Chat</title>
+    </head>
+    <body>
+        <main>
+            <header>
+                <div class="title">
+                    <img src="icons/pngegg.png" width="45px" />
+                    <h1>H-Chat</h1>
+                </div>
+                <button type="button" onclick="showHide()">
+                    <img src="icons/icons8-hamburger-32.png" width="40px" />
+                </button>
+            </header>
+            <div class="container">
+                <div class="users-window">
+                    <div class="users-head">
+                        <h3>People</h3>
+                        <h4 class="users-count">3</h4>
+                    </div>
+                    <div class="users-list"></div>
+                </div>
+                <div class="chat-window">
+                    <div class="chats">
+                    </div>
+                    <div class="user-input">
+                        <input
+                            id="user-msg"
+                            type="text"
+                            placeholder="Enter Your message........."
+                        />
+                        <button id="user-send">Send</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+    <script>
+        var uwin = document.querySelector(".users-window");
+        function showHide(params) {
+            if (uwin.style.display == "block") {
+                uwin.style.display = "none";
+            } else {
+                uwin.style.display = "block";
+            }
+        }
+    </script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/script.js"></script>
+</html>

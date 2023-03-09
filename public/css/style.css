@@ -1,0 +1,185 @@
+/* ///////////////////header ///////////////////////// */
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&family=Righteous&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 1.5s ease-in-out ;
+    font-family: "Righteous", cursive;
+}
+
+::-webkit-scrollbar{
+     display:none;
+}
+
+/* font-family: 'Lobster', cursive; */
+/* font-family: 'Pacifico', cursive; */
+/* font-family: 'Righteous', cursive; */
+
+main {
+    margin: 50px auto;
+    /* transform: translate(-50% -50%); */
+    width: 80%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+main > header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(110, 197, 255);
+    color: white;
+    padding: 7px 20px;
+}
+
+main > header > button {
+    background: none;
+    border: none;
+    outline: none;
+    display: none;
+}
+
+.title {
+    display: flex;
+}
+.title h1 {
+    font-family: "Pacifico", cursive;
+    margin-left: 10px;
+}
+
+/* /////////////////// container ///////////////////////// */
+
+.container {
+    background-color: #8aff73;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.users-window {
+    width: 350px;
+    color: white;
+    background: rgb(92, 165, 70);
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.users-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.users-head > h4 {
+    background-color: #7daa74;
+    padding: 0px 8px;
+    border-radius: 50px;
+}
+
+.users-list p {
+    /* font-size: ; */
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+.chat-window {
+    width: 100%;
+    border-radius: 10px;
+    background: rgb(92, 165, 70);
+}
+
+.chats {
+    height: 65vh;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.user-join {
+    font-size: 0.9rem;
+    color: #7daa74;
+    background: white;
+    padding: 7px 20px;
+    width: max-content;
+    border-radius: 50px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.message {
+    color: #7daa74;
+    background: white;
+    padding: 5px 15px;
+    width: 400px;
+    margin-bottom: 15px;
+    border-radius: 5px 20px 5px 20px;
+    text-align: center;
+}
+
+.outgoing {
+    margin-left: auto;
+    color: white;
+    background: #e77a7adb;
+    border-radius: 20px 5px 20px 5px;
+}
+
+.user-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 20px;
+}
+
+.user-input > input {
+    /* font-size: ; */
+    background: white;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    width: 100%;
+    border-radius: 50px 0 0 50px;
+}
+
+.user-input > button {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px 15px;
+    border: none;
+    outline: none;
+    letter-spacing: 0.5px;
+    color: white;
+    background: rgb(110, 197, 255);
+    border-radius: 0px 50px 50px 0px;
+}
+
+@media screen and (max-width: 900px) {
+    main {
+        width: 95%;
+    }
+    main > header > button {
+        display: block;
+    }
+    .container{
+        position: relative;
+    }
+    .users-window {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+        height: max-content;
+        z-index: 11;
+        box-shadow: 0 15px 20px -20px black;
+        padding-bottom: 0%;
+        display: none;
+    }
+    .message {
+        max-width: 200px;
+        padding: 20px;
+    }
+}    
